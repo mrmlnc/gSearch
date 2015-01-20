@@ -1,0 +1,26 @@
+{
+  "name": "gsearch",
+  "version": "0.2.2",
+  "authors": [
+    "Denis Malinochkin <dmalinochkin@land.ru>"
+  ],
+  "description": "A Common Search Engine based On RSS for Ghost and more.",
+  "main": "gsearch.js",
+  "keywords": [
+    "ghost",
+    "search",
+    "gsearch",
+    "lunr",
+    "rss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "example"
+  ],
+  "dependencies": {
+    "lunr.js": "*",
+    "jquery": "*"
+  }
+}
