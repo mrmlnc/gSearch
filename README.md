@@ -70,11 +70,15 @@ Element to display the search results.
 
 Example: `results: '#resultBox'`
 
+---
+
 **resultsMax [false (default) || number]**
 
 The number of search results to display.
 
 Example: `resultsMax: 10`
+
+---
 
 **rss ['/rss' (default) || string]**
 
@@ -82,9 +86,13 @@ If the rss feed on your website is different than a standard ghost installation 
 
 Example: `rss: 'rss.xml'`
 
+---
+
 **liveSearch [true || false (default)]**
 
 You can have the search results appear "as you type".
+
+---
 
 **resultTemplate [string]**
 
@@ -101,6 +109,8 @@ The result template has access to these variables:
 
 Example: `resultTemplate: '<h4>{{title}}</h4><p>{{description}}</p>'`
 
+---
+
 **infoTemplate [string]**
 
 Customizing the html template to display information on the results of the search.
@@ -111,11 +121,15 @@ The info template has access to these variables:
 
 Example: `infotemplate: '<p>Number of posts found: {{amount}}</p>'`
 
+---
+
 **displaySearchInfo [true || false (default)]**
 
 If you don't want to show the search info.
 
 Example: `displaySearchInfo: false`
+
+---
 
 **zeroResultsInfo [true (default) || false]**
 
@@ -123,17 +137,23 @@ If you don't want to show the search info when the results are zero.
 
 Example: `zeroResultsInfo: true`
 
+---
+
 **descriptionLength [false (default) || number]**
 
 Limit on the number of characters in description.
 
 Example: `descriptionLength: 200`
 
+---
+
 **descriptionEllipsis [false (default) || string]**
 
 An ellipsis at the end of the description.
 
 Example: `descriptionEllipsis: '>>>'`
+
+---
 
 **descriptionTags [true (default) || false || string]**
 
@@ -144,6 +164,8 @@ Example: `descriptionTags: true`
 Strip all HTML tags, except allowed.
 
 Exapmle: `descriptionTags: '<h1><p>'`
+
+---
 
 **language [false (default) || string]**
 
@@ -157,6 +179,8 @@ Additional dependencies:
 <script src="path/to/../lunr.stemmer.support.js"></script>
 <script src="path/to/../lunr.ru.js"></script>
 ````
+
+---
 
 **beforeFind [false (default) || function]**
 
@@ -174,6 +198,8 @@ beforeFind: function(data) {
 }
 ````
 
+---
+
 **afterFind [false (default) || function]**
 
 Callback function after the search operation, but before display the results.
@@ -190,6 +216,8 @@ afterFind: function(data) {
 }
 ````
 
+---
+
 **onComplete [false (default) || function]**
 
 Callback function after performing a search and display the results.
@@ -204,6 +232,9 @@ Example:
 afterFind: function(data) {
   console.log(data)
 }
+````
+
+---
 
 Clearing the results
 --------------
