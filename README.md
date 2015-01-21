@@ -64,37 +64,55 @@ $('#searchInput').gSearch({
 Advanced features
 --------------
 
-**results [false (default) || element]**
+**results** *[false (default) || string]*
 
 Element to display the search results.
 
-Example: `results: '#resultBox'`
+````JS
+{
+  results: '#resultBox'
+}
+````
 
 ---
 
-**resultsMax [false (default) || number]**
+**resultsMax** *[false (default) || number]*
 
 The number of search results to display.
 
-Example: `resultsMax: 10`
+````JS
+{
+  resultsMax: 10
+}
+````
 
 ---
 
-**rss ['/rss' (default) || string]**
+**rss** *['/rss' (default) || string]*
 
 If the rss feed on your website is different than a standard ghost installation \rss you can specify that in the options.
 
-Example: `rss: 'rss.xml'`
+````JS
+{
+  rss: 'rss.xml'
+}
+````
 
 ---
 
-**liveSearch [true || false (default)]**
+**liveSearch** *[true || false (default)]*
 
 You can have the search results appear "as you type".
 
+````JS
+{
+  liveSearch: true
+}
+````
+
 ---
 
-**resultTemplate [string]**
+**resultTemplate** *[string]*
 
 Customizing the html template to display the results.
 
@@ -107,11 +125,15 @@ The result template has access to these variables:
  * category
  * pubDate
 
-Example: `resultTemplate: '<h4>{{title}}</h4><p>{{description}}</p>'`
+````JS
+{
+  resultTemplate: '<h4>{{title}}</h4><p>{{description}}</p>'
+}
+````
 
 ---
 
-**infoTemplate [string]**
+**infoTemplate** *[string]*
 
 Customizing the html template to display information on the results of the search.
 
@@ -119,59 +141,84 @@ The info template has access to these variables:
 
  * amount
 
-Example: `infotemplate: '<p>Number of posts found: {{amount}}</p>'`
+````JS
+{
+  infotemplate: '<p>Number of posts found: {{amount}}</p>'
+}
+````
 
 ---
 
-**displaySearchInfo [true || false (default)]**
+**displaySearchInfo** *[true || false (default)]*
 
 If you don't want to show the search info.
 
-Example: `displaySearchInfo: false`
+````JS
+{
+  displaySearchInfo: false
+}
+````
 
 ---
 
-**zeroResultsInfo [true (default) || false]**
+**zeroResultsInfo** *[true (default) || false]*
 
 If you don't want to show the search info when the results are zero.
 
-Example: `zeroResultsInfo: true`
+````JS
+{
+  zeroResultsInfo: true
+}
+````
 
 ---
 
-**descriptionLength [false (default) || number]**
+**descriptionLength** *[false (default) || number]*
 
 Limit on the number of characters in description.
 
-Example: `descriptionLength: 200`
+````JS
+{
+  descriptionLength: 200
+}
+````
 
 ---
 
-**descriptionEllipsis [false (default) || string]**
+**descriptionEllipsis** *[false (default) || string]*
 
 An ellipsis at the end of the description.
 
-Example: `descriptionEllipsis: '>>>'`
+````JS
+{
+  descriptionEllipsis: '>>>'
+}
+````
 
 ---
 
-**descriptionTags [true (default) || false || string]**
+**descriptionTags** *[true (default) || false || string]*
 
-Removing all HTML tags from text in description.
+Removing all HTML tags from text in description or strip all HTML tags, except allowed.
 
-Example: `descriptionTags: true`
-
-Strip all HTML tags, except allowed.
-
-Exapmle: `descriptionTags: '<h1><p>'`
+````JS
+{
+  descriptionTags: true,
+  descriptionTags: '<h1><p>'
+}
+````
 
 ---
 
-**language [false (default) || string]**
+**language** *[false (default) || string]*
 
 If you need additional language for your search, please specify it.
 
-Example: `language: 'ru'`
+````JS
+{
+  language: 'ru'
+}
+````
 
 Additional dependencies:
 
@@ -182,15 +229,13 @@ Additional dependencies:
 
 ---
 
-**beforeFind [false (default) || function]**
+**beforeFind** *[false (default) || function]*
 
 Callback function before the search operation.
 
 Access to variables:
 
  * rssData (parsed RSS feed)
-
-Example:
 
 ````JS
 beforeFind: function(data) {
@@ -200,15 +245,13 @@ beforeFind: function(data) {
 
 ---
 
-**afterFind [false (default) || function]**
+**afterFind** *[false (default) || function]*
 
 Callback function after the search operation, but before display the results.
 
 Access to variables:
 
  * searchResult (search results)
-
-Example:
 
 ````JS
 afterFind: function(data) {
@@ -218,15 +261,13 @@ afterFind: function(data) {
 
 ---
 
-**onComplete [false (default) || function]**
+**onComplete** *[false (default) || function]*
 
 Callback function after performing a search and display the results.
 
 Access to variables:
 
  * resultsData (search results)
-
-Example:
 
 ````JS
 afterFind: function(data) {
